@@ -184,7 +184,9 @@ const controller = {
     let completed = document.querySelector('.completed')
     completed.style.display = 'none'
     model.times = 0
+    view.renderTriedTimes(model.times = 0)
     model.score = 0
+    view.renderScore(model.score = 0)
     controller.generateCards()
     controller.clickCards()
   },
