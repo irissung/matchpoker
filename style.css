@@ -1,0 +1,116 @@
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid #e0e0e0;
+  flex: 7% 1 1;
+  height: 9vw;
+  margin: 2px;
+  box-sizing: border-box;
+}
+
+.card img {
+  height: 30px;
+  align-self: center;
+}
+
+.card P {
+  margin: 0px 4px;
+  font-size: 15px;
+}
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired {
+  background-color: plum;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 85%;
+  align-items: flex-end;
+}
+
+#header .title {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#header .title img {
+  max-width: 3em;
+  padding-right: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-top: 0;
+}
+
+.wrong {
+  /*動畫名稱*/
+  animation-name: wrongAnimation;
+  /*動畫持續秒數:動畫要持續 0.2 秒，也就是「逐漸加入黃色邊框」的效果要用 0.2 秒來跑完。*/
+  animation-duration: 0.2s;
+  /*總共執行幾次:動畫要重覆 5 次*/
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  /*從0%到100%中間可以設計多項變化，這邊只有一種變化所以使用to，變化內容為加入黃色的border*/
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+
+/*遊戲結束畫面設定*/
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+.completed > p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+.completed > p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;  
+}
+.completed button {
+  width: 8em;
+  height: 2em;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  font-size: 1.2em;
+}
+.completed button:hover {
+  background-color: royalblue;
+}
